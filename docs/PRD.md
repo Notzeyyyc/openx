@@ -43,7 +43,7 @@ OpenX adalah ekosistem AI agent ala Apple — tapi bukan OS, melainkan **platfor
 ### 3.2 Non-Tujuan (Fase 1)
 - ❌ Bukan OS / bukan pengganti iOS-Android.
 - ❌ Bukan LLM hosting — agent jalan di server, LLM dipanggil via API (9router).
-- ❌ Bukan marketplace berbayar penuh (billing/QRIS di fase lanjut).
+- ❌ Bukan marketplace berbayar (billing/monetisasi ditunda — belum ada keputusan).
 - ❌ Bukan editor kode di dalam app.
 
 ### 3.3 Metrik Sukses (Fase 1)
@@ -112,9 +112,9 @@ Platform pusat wajib untuk: auth, discoverability, permission.
 | 2 | Platform: register, auth token, agents, chat API | ✅ |
 | 3 | 1 agent seed (WaBot) + tool `get_time`, `echo` | ✅ |
 | 4 | Agent runtime: prompt + tools + stub reply | ✅ |
-| 5 | **Colok LLM beneran** (ganti stub → call 9router) | ⬜ |
-| 6 | Agent bisa panggil tool dari chat | ⬜ |
-| 7 | Chat history persist + load | ⬜ |
+| 4 | **Colok LLM beneran** (ganti stub → call 9router) | ⬜ |
+| 5 | Agent panggil tool dari chat (`web_search`, `http_request`) | ⬜ |
+| 6 | Chat history persist + load | ⬜ |
 
 ### Fase 2 — Multi-agent & Store
 | # | Fitur |
@@ -187,7 +187,7 @@ dasar + LLM beneran      multi-agent + store       federation + permission
 
 ## 11. Pertanyaan Terbuka
 
-1. Agent custom: user bikin via form/config (no-code) atau nulis script JS? → **keputusan:** mulai dari form, script JS untuk power user.
-2. Tool bawaan MVP: WA (openx-wa), browser, file, API — mana prioritas?
+1. Agent custom: user bikin via **form (no-code)** — keputusan: mulai dari form, script JS untuk power user.
+2. Tool bawaan MVP: prioritas `web_search` + `http_request` (generik), `wa_send` (integrasi openx-wa) belakangan.
 3. App nama & branding: "OpenX" — perlu logo/icon?
-4. Billing QRIS: mulai kapan? (Fase 4 atau lebih awal)
+4. ~~Billing QRIS~~ — ditunda, belum ada keputusan monetisasi.
